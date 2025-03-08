@@ -1,0 +1,240 @@
+[gd_scene load_steps=13 format=3 uid="uid://c362eixd3vv0k"]
+
+[ext_resource type="Script" uid="uid://bq6yb3b0vc23j" path="res://options_in_game.gd" id="1_glvss"]
+[ext_resource type="Texture2D" uid="uid://b8aivhqj33ji6" path="res://buttons/dasda__3_-removebg-preview.png" id="2_246ds"]
+[ext_resource type="Texture2D" uid="uid://cvto1uvabsxh5" path="res://Scenes/sddd (4).png" id="2_r21dj"]
+[ext_resource type="FontFile" uid="uid://cbi24hijt18pf" path="res://font/OilvareBaseRough-Regular.ttf" id="3_8r157"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mdv6"]
+texture = ExtResource("2_r21dj")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qydy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn5vu"]
+bg_color = Color(0.93342, 0.68543, 0.0972066, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_color = Color(0.537011, 0.537011, 0.537011, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pfbb"]
+bg_color = Color(0.827451, 0.603922, 0.054902, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_color = Color(0.712129, 0.712129, 0.712129, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnmy8"]
+bg_color = Color(0.522564, 0.376308, 0.0209407, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oeiwu"]
+bg_color = Color(0.701961, 0.45098, 0.0313726, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyfb8"]
+bg_color = Color(0.701961, 0.45098, 0.0313726, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pdo6"]
+bg_color = Color(0.149162, 0.0975312, 0.00188312, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 15
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_glvss")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6mdv6")
+
+[node name="X button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 28.0
+offset_right = 1106.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_1qydy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1qydy")
+icon = ExtResource("2_246ds")
+expand_icon = true
+
+[node name="Sound Button" type="CheckButton" parent="Panel"]
+layout_direction = 2
+layout_mode = 0
+offset_left = 192.0
+offset_top = 138.0
+offset_right = 276.0
+offset_bottom = 162.0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("3_8r157")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mn5vu")
+text = "Sound"
+
+[node name="Music Button" type="CheckButton" parent="Panel"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -485.0
+offset_top = 135.0
+offset_right = -403.0
+offset_bottom = 159.0
+grow_horizontal = 0
+scale = Vector2(4, 4)
+theme_override_fonts/font = ExtResource("3_8r157")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/focus = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_mn5vu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mn5vu")
+text = "Music"
+
+[node name="Edit Player Nsme Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.178
+anchor_top = 0.447
+anchor_right = 0.851
+anchor_bottom = 0.538
+offset_left = -38.056
+offset_top = -27.656
+offset_right = 44.648
+offset_bottom = 5.37598
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_8r157")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_6pfbb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_6pfbb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bnmy8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_oeiwu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pyfb8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4pdo6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6pfbb")
+text = "Edit Player Name"
+
+[node name="User Guide" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.184
+anchor_top = 0.621
+anchor_right = 0.864
+anchor_bottom = 0.685
+offset_left = -44.968
+offset_top = -25.408
+offset_right = 33.672
+offset_bottom = 22.12
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_8r157")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_6pfbb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_6pfbb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bnmy8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_oeiwu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pyfb8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4pdo6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6pfbb")
+text = "User Guide"
+
+[node name="Exit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.184
+anchor_top = 0.652
+anchor_right = 0.867
+anchor_bottom = 0.748
+offset_left = -40.968
+offset_top = 70.504
+offset_right = 34.2159
+offset_bottom = 97.296
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_8r157")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_6pfbb")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_6pfbb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bnmy8")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_oeiwu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pyfb8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4pdo6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6pfbb")
+text = "Exit"
+
+[connection signal="pressed" from="Panel/X button" to="." method="_on_x_button_pressed"]
+[connection signal="pressed" from="Panel/Exit" to="." method="_on_exit_pressed"]

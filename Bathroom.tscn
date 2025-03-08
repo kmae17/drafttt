@@ -1,0 +1,106 @@
+[gd_scene load_steps=21 format=3 uid="uid://b5mpwh2jehgjt"]
+
+[ext_resource type="Script" uid="uid://b75t0kthd16rv" path="res://bathroom.gd" id="1_e6am6"]
+[ext_resource type="Texture2D" uid="uid://dn5l2tp6b4rft" path="res://Scenes/sddd (6).png" id="1_rh2qy"]
+[ext_resource type="Texture2D" uid="uid://cy5hfq3k6441a" path="res://buttons/left.png" id="2_61r1x"]
+[ext_resource type="Texture2D" uid="uid://bv3qa518wv35s" path="res://buttons/menu.png" id="4_bao7o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h44tv"]
+texture = ExtResource("1_rh2qy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exgn1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tcj3k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qb7sm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jcfd8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e0f3n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fr4wj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_papol"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i25xd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fip4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3cw51"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i17w8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ka6y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_umuo7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aikh3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_83l7s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e6am6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_h44tv")
+
+[node name="Back Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.068
+anchor_top = 0.109
+anchor_right = 0.068
+anchor_bottom = 0.109
+offset_left = -51.336
+offset_top = -53.632
+offset_right = 51.664
+offset_bottom = 53.368
+theme_override_styles/focus = SubResource("StyleBoxTexture_exgn1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_tcj3k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_qb7sm")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_jcfd8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_e0f3n")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_fr4wj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_papol")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_i25xd")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3fip4")
+toggle_mode = true
+icon = ExtResource("2_61r1x")
+flat = true
+expand_icon = true
+
+[node name="Options Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.913
+anchor_top = 0.058
+anchor_right = 0.958
+anchor_bottom = 0.158
+offset_left = -25.776
+offset_top = -21.584
+offset_right = 23.3839
+offset_bottom = 15.616
+grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_3cw51")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_i17w8")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7ka6y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_umuo7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aikh3")
+theme_override_styles/normal = SubResource("StyleBoxTexture_83l7s")
+icon = ExtResource("4_bao7o")
+expand_icon = true
+
+[connection signal="pressed" from="Panel/Back Button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Options Button" to="." method="_on_options_button_pressed"]

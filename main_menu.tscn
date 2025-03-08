@@ -1,0 +1,97 @@
+[gd_scene load_steps=20 format=3 uid="uid://h4qm881r2e1q"]
+
+[ext_resource type="Script" uid="uid://fhxr56bl1kwm" path="res://main_menu.gd" id="1_2mnyl"]
+[ext_resource type="Texture2D" uid="uid://bk84n35y51kxx" path="res://Scenes/Button (4).png" id="2_c32ll"]
+[ext_resource type="Texture2D" uid="uid://bv3qa518wv35s" path="res://buttons/menu.png" id="3_yst5s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqeui"]
+texture = ExtResource("2_c32ll")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i22xu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frsdy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i446n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmxdk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ke6br"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_027vx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwqkh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmr63"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4msp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0q30b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fd50"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_usflx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g60kg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8wku"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0l0hl"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2mnyl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lqeui")
+
+[node name="Click anywhere" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxTexture_i22xu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_frsdy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_i446n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hmxdk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ke6br")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_027vx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fwqkh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_pmr63")
+theme_override_styles/normal = SubResource("StyleBoxTexture_o4msp")
+
+[node name="Options Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.913
+anchor_top = 0.058
+anchor_right = 0.958
+anchor_bottom = 0.158
+offset_left = -25.776
+offset_top = -21.584
+offset_right = 23.3839
+offset_bottom = 15.616
+grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_0q30b")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3fd50")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_usflx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g60kg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l8wku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0l0hl")
+icon = ExtResource("3_yst5s")
+expand_icon = true
+
+[connection signal="pressed" from="Click anywhere" to="." method="_on_click_anywhere_pressed"]
+[connection signal="pressed" from="Options Button" to="." method="_on_options_button_pressed"]
